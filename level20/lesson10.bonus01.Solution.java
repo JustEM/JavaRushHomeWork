@@ -36,15 +36,14 @@ public class Solution {
         for (int n = 1; n < N; n++){
             int sum = 0, tempN = n, digit;
             int exponent = String.valueOf(tempN).length();  //Получаем степень числа
-            while(tempN != 0) // Пока текущее число tempN имеет цифры
-                for (int i = 0; i< exponent; i++) {
-                    int currentX = 1;
-                    digit = tempN % 10;
-                    for(int j = 0; j< exponent; j++)
-                        currentX *= digit;
-                    sum += currentX;
-                    tempN /= 10;
-                }
+            for (int i = 0; i< exponent; i++) {
+                int currentX = 1;
+                digit = tempN % 10;
+                for(int j = 0; j< exponent; j++)
+                    currentX *= digit;
+                sum += currentX;
+                tempN /= 10;
+            }
             if (n == sum)
                 tempList.add(n);
         }
