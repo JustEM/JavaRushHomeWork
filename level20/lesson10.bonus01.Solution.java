@@ -3,6 +3,7 @@ package com.javarush.test.level20.lesson10.bonus01;
 import java.util.ArrayList;
 import java.util.List;
 
+/// JustEM - задача решени 16.12.2015
 /* Алгоритмы-числа
 Число S состоит из M цифр, например, S=370 и M(количество цифр)=3
 Реализовать логику метода getNumbers, который должен среди натуральных чисел меньше N (long)
