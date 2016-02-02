@@ -32,7 +32,7 @@ public class Solution {
         System.out.println(checkTelNumber("(123)4-1234-11"));
     }
     public static boolean checkTelNumber(String telNumber) {
-        String justNums =telNumber.replaceAll("[a-zA-Zа-яА-Я\\-\\+\\(\\)]", ""); //Убираем из строки номера все кроме цифр
+        String justNums =telNumber.replaceAll("\\D", ""); //Убираем из строки нОмера все кроме цифр
         if(telNumber.charAt(0) == '+' && justNums.length() != 12)
                 return false;
         else if (telNumber.charAt(0) != '+' && justNums.length() != 10)
